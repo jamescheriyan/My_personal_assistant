@@ -5,7 +5,7 @@ from datetime import datetime
 import streamlit.components.v1 as components
 
 
-API_KEY = "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"
+API_KEY = os.getenv("OPENROUTER_API_KEY")
 MODEL = "deepseek/deepseek-r1:free"
 
 st.set_page_config(page_title="AI Resume Assistant", page_icon="🤖", layout="centered")
