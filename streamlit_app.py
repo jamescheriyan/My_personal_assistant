@@ -233,13 +233,14 @@ with st._bottom:
         st.text_input(
             "Ask a question about James Cheriyan’s resume:",
             key="user_input",
+            on_change=send_message,
             placeholder="Type your question and press Enter...",
             label_visibility="collapsed"
         )
 
     with col2:
         if st.button("Send", key="send_btn"):
-            send_message()
+            
 
 # Chat message container styling
 for msg in st.session_state.messages:
