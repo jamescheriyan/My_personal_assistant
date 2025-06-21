@@ -15,7 +15,7 @@ st.set_page_config(
     layout="centered"
 )
 st.markdown("""
-### (✧◡✧)🤖 — Hello! I’m **JAi**, your AI Assistant.
+### <span style="font-size: 2.5rem;">🤖</span> — Hello! I’m **JAi**, your AI Assistant.
 ##### _James’s Mind • AI’s Precision_
 """)
 
