@@ -183,13 +183,13 @@ def send_message():
             st.session_state.user_input = ""  # Clear input box
 
         with st.spinner("🤖 Thinking..."):
-              answer = ask_openrouter(user_question)
-            st.session_state.loading = False
-            st.session_state.messages.append({
-                "role": "assistant",
-                "content": answer,
-                "time": format_timestamp()
-            })
+            answer = ask_openrouter(user_question)
+        st.session_state.loading = False
+        st.session_state.messages.append({
+            "role": "assistant",
+            "content": answer,
+            "time": format_timestamp()
+        })
     
 # Sidebar example questions
 st.sidebar.header("Example questions")
