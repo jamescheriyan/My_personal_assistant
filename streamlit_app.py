@@ -188,9 +188,6 @@ def send_message():
             "content": answer,
             "time": format_timestamp()
         })
-        
-def handle_text_input():
-    st.session_state.trigger_send = True
     
 # Sidebar example questions
 st.sidebar.header("Example questions")
@@ -233,8 +230,7 @@ with st._bottom:
         st.text_input(
             "Ask a question about James Cheriyan’s resume:", 
             key="user_input", 
-            placeholder="Type your question and press Enter...",
-            label_visibility="collapsed"
+            placeholder="Type your question and press Enter..."
         )
     with col2:
          if st.button("➤", use_container_width=True):
