@@ -15,9 +15,9 @@ st.set_page_config(
     layout="centered"
 )
 st.markdown("""
-### <span style="font-size: 2.5rem;">🤖</span> — Hello! I’m **JAi**, your AI Assistant.
-##### _James’s Mind • AI’s Precision_
-""")
+<h3>(✧◡✧)<span style="font-size: 2.5rem;">🤖</span> — Hello! I’m <b>JAi</b>, your AI Assistant.</h3>
+<h5><i>James’s Mind • AI’s Precision</i></h5>
+""", unsafe_allow_html=True)
 
 if API_KEY is None:
     st.error("Please set the OPENROUTER_API_KEY environment variable.")
