@@ -199,10 +199,26 @@ examples = [
     "What experience do you have in telecom or VoIP?",
 ]
 
-for example in examples:
-    if st.button(example):
-        st.session_state.user_input = example
-        send_message()
+st.markdown("### Example questions")
+
+examples = [
+    "What are your technical skills?",
+    "Describe your experience at Natterbox.",
+    "What is your educational background?",
+    "Summarize your work history.",
+    "What experience do you have in telecom or VoIP?",
+]
+
+# Create a column for each question
+cols = st.columns(len(examples))
+
+for col, example in zip(cols, examples):
+    with col:
+        # HTML to make text small
+        if st.button(f"💬 {example}", key=f"ex_{example}"):
+            st.session_state.user_input = example
+            send_message()
+        st.markdown(f"<div style='font-size: 0.75rem; text-align: center;'>{example}</div>", unsafe_allow_html=True)
 
 for example in examples:
     if st.sidebar.button(example):
