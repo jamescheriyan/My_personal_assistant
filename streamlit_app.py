@@ -188,7 +188,10 @@ def send_message():
             "content": answer,
             "time": format_timestamp()
         })
-
+        
+def handle_text_input():
+    st.session_state.trigger_send = True
+    
 # Sidebar example questions
 st.sidebar.header("Example questions")
 examples = [
@@ -229,10 +232,15 @@ st._bottom.text_input(
     key="user_input", 
     on_change=send_message,
     placeholder="Type your question and press Enter...",
-st.markdown(f"<div style='font-size: 0.75rem; text-align: center;'></div>", unsafe_allow_html=True)
-)
-            
+    label_visibility="collapsed")
 
+if st.button("Send"):
+    st.session_state.trigger_send = True
+    
+if st.session_state.get("trigger_send"):
+    send_message()
+    st.session_state.trigger_send = False  # reset
+    
 # Chat message container styling
 for msg in st.session_state.messages:
     if msg["role"] == "user":
