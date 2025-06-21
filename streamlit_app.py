@@ -231,7 +231,7 @@ st._bottom.text_input(
     key="user_input", 
     on_change=send_message,
     placeholder="Type your question and press Enter...",
-    st.button("Send", key="send_btn")
+    st.button("Send", key="send_btn"),
     send_message()
 )
 
