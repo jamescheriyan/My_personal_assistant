@@ -199,6 +199,15 @@ examples = [
     "What experience do you have in telecom or VoIP?",
 ]
 
+st.header("Example questions")
+examples = [
+    "What are your technical skills?",
+    "Describe your experience at Natterbox.",
+    "What is your educational background?",
+    "Summarize your work history.",
+    "What experience do you have in telecom or VoIP?",
+]
+
 for example in examples:
     if st.sidebar.button(example):
         st.session_state.user_input = example
