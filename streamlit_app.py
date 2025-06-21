@@ -209,7 +209,7 @@ examples = [
 ]
 
 for example in examples:
-    if st.header.button(example):
+    if st.button(example):
         st.session_state.user_input = example
         send_message()
 
