@@ -184,7 +184,6 @@ def send_message():
 
         with st.spinner("🤖 Thinking..."):
             answer = ask_openrouter(user_question)
-        st.session_state.loading = False
         st.session_state.messages.append({
             "role": "assistant",
             "content": answer,
