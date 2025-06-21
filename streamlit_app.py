@@ -235,7 +235,7 @@ for msg in st.session_state.messages:
                     <b>You</b> <span style="font-size: 0.75em; color: gray;">{msg['time']}</span><br>
                     {msg['content']}
                 </div>
-                <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" alt="User Avatar" style="
+                <img src="https://cdn-icons-png.flaticon.com/512/1177/1177568.png" alt="User Avatar" style="
                     width: 36px;
                     height: 36px;
                     border-radius: 50%;
