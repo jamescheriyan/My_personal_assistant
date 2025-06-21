@@ -229,17 +229,17 @@ for example in examples:
 with st._bottom:
     col1, col2 = st.columns([8, 1])  # Adjust ratio as needed
 
-    with col1:
-        st.text_input(
-            "Ask a question about James Cheriyan’s resume:",
-            key="user_input",
-            on_change=send_message,
-            placeholder="Type your question and press Enter...",
-            label_visibility="collapsed"
+with col1:
+    st.text_input(
+        "Ask a question about James Cheriyan’s resume:",
+        key="user_input",
+        on_change=send_message,
+        placeholder="Type your question and press Enter...",
+        label_visibility="collapsed"
         )
 
-    with col2:
-        if st.button("Send", key="send_btn"):
+with col2:
+    if st.button("Send", key="send_btn"):
             
 
 # Chat message container styling
