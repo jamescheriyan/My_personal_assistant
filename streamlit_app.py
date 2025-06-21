@@ -231,9 +231,7 @@ st._bottom.text_input(
     key="user_input", 
     on_change=send_message,
     placeholder="Type your question and press Enter...                                                              ➤")
-
-if st.session_state.loading:
-    st.spinner("🤖 Thinking...") 
+ 
 
 
 # Chat message container styling
