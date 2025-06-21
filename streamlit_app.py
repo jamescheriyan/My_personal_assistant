@@ -199,7 +199,7 @@ examples = [
     "What experience do you have in telecom or VoIP?",
 ]
 
-st.markdown("<br><br><br>")
+st.markdown("<br><br><br>", unsafe_allow_html=True)
 
 examples = [
     "What are your technical skills?",
