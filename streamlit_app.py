@@ -229,7 +229,7 @@ st._bottom.text_input(
     key="user_input", 
     on_change=send_message,
     placeholder="Type your question and press Enter...",
-    st.markdown(f"<div style='font-size: 0.75rem; text-align: center;'></div>", unsafe_allow_html=True)
+st.markdown(f"<div style='font-size: 0.75rem; text-align: center;'></div>", unsafe_allow_html=True)
 )
             
 
