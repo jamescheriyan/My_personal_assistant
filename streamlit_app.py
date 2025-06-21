@@ -240,6 +240,7 @@ with col1:
 
 with col2:
     if st.button("Send", key="send_btn"):
+        send_message()
             
 
 # Chat message container styling
