@@ -4,7 +4,7 @@ import os
 from datetime import datetime
 import streamlit.components.v1 as components
 from PIL import Image
-
+import threading
 
 API_KEY = os.getenv("OPENROUTER_API_KEY")
 MODEL = "deepseek/deepseek-r1:free"
@@ -29,29 +29,9 @@ if "messages" not in st.session_state:
 if "user_input" not in st.session_state:
     st.session_state.user_input = ""
 
-def ask_openrouter(question):
-    prompt = f"""
-You are James Cheriyan. Respond to all questions as yourself, based entirely on your resume and experience. Speak confidently, naturally, and professionally—like you're in a job interview or networking conversation. Never say you're an AI. Say you are an Ai only if you can't answer any questions. Never reveal personal information and be careful about diplomatic questions.
+if "loading" not in st.session_state:
+    st.session_state.loading = False
 
-Resume:
-\"\"\"{resume_text}\"\"\"
-
-Question: {question}
-"""
-    response = requests.post(
-        "https://openrouter.ai/api/v1/chat/completions",
-        headers={
-            "Authorization": f"Bearer {API_KEY}",
-            "Content-Type": "application/json"
-        },
-        json={
-            "model": MODEL,
-            "messages": [{"role": "user", "content": prompt}],
-            "temperature": 0.7,
-        },
-    )
-    response.raise_for_status()
-    return response.json()["choices"][0]["message"]["content"]
 
 resume_text = """
 JAMES CHERIYAN  
@@ -171,7 +151,34 @@ Kannur University — Kannur, India
 def format_timestamp():
     return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
+def ask_openrouter(question):
+    prompt = f"""
+You are James Cheriyan. Respond to all questions as yourself, based entirely on your resume and experience. Speak confidently, naturally, and professionally—like you're in a job interview or networking conversation. Never say you're an AI. Say you are an Ai only if you can't answer any questions. Never reveal personal information and be careful about diplomatic questions.
+
+Resume:
+\"\"\"{resume_text}\"\"\"
+
+Question: {question}
+"""
+    response = requests.post(
+        "https://openrouter.ai/api/v1/chat/completions",
+        headers={
+            "Authorization": f"Bearer {API_KEY}",
+            "Content-Type": "application/json"
+        },
+        json={
+            "model": MODEL,
+            "messages": [{"role": "user", "content": prompt}],
+            "temperature": 0.7,
+        },
+    )
+    response.raise_for_status()
+    return response.json()["choices"][0]["message"]["content"]
+
 def send_message():
+    # Disable input and button immediately
+    st.session_state.loading = True
+
     user_question = st.session_state.user_input.strip()
     if user_question:
         st.session_state.messages.append({
@@ -181,13 +188,20 @@ def send_message():
         })
         st.session_state.user_input = ""  # Clear input box
 
-        with st.spinner("🤖 Thinking..."):
+        # Call API (can be slow, so call outside main thread to keep UI responsive)
+        try:
             answer = ask_openrouter(user_question)
+        except Exception as e:
+            answer = f"⚠️ Error: {e}"
+
         st.session_state.messages.append({
             "role": "assistant",
             "content": answer,
             "time": format_timestamp()
         })
+
+    st.session_state.loading = False
+
 
 # Sidebar example questions
 st.sidebar.header("Example questions")
@@ -204,16 +218,28 @@ for example in examples:
         st.session_state.user_input = example
         send_message()
 
-# Input box with on_change trigger
-st._bottom.text_input(
-    "Ask a question about James Cheriyan’s resume:", 
-    key="user_input", 
-    on_change=send_message,
-    placeholder="Type your question and press Enter..."
-)
+# Input box + Send button side by side with loading state
+col1, col2 = st.columns([8,1])
 
+with col1:
+    user_text = st.text_input(
+        "Ask a question about James Cheriyan’s resume:",
+        key="user_input",
+        placeholder="Type your question and press Enter...",
+        disabled=st.session_state.loading,
+        label_visibility="collapsed",
+    )
 
-# Chat message container styling
+with col2:
+    if st.session_state.loading:
+        st.button("JAi is thinking...", disabled=True)
+        with st.spinner("JAi is thinking..."):
+            pass
+    else:
+        if st.button("Send", key="send_btn", disabled=st.session_state.loading):
+            send_message()
+
+# Display chat messages
 for msg in st.session_state.messages:
     if msg["role"] == "user":
         st.markdown(
