@@ -199,7 +199,7 @@ examples = [
     "What experience do you have in telecom or VoIP?",
 ]
 
-st.header("Example questions")
+st.header()
 examples = [
     "What are your technical skills?",
     "Describe your experience at Natterbox.",
