@@ -182,7 +182,7 @@ def send_message():
         if "user_input" in st.session_state:
             st.session_state.user_input = ""  # Clear input box
 
-        with st.bottom:
+        with st._bottom:
             st.spinner("🤖 Thinking..."):
                 answer = ask_openrouter(user_question)
             st.session_state.messages.append({
