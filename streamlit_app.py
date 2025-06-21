@@ -230,7 +230,7 @@ st._bottom.text_input(
     "Ask a question about James Cheriyan’s resume:", 
     key="user_input", 
     on_change=send_message,
-    placeholder="Type your question and press Enter..."
+    placeholder="Type your question and press Enter...",
     st.button("Send", key="send_btn"):
     send_message()
 )
