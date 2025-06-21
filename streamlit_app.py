@@ -237,11 +237,9 @@ with st._bottom:
             label_visibility="collapsed"
         )
     with col2:
-        if st.button("Send", key="send_btn"):
-            st.session_state.trigger_send = True
-if st.session_state.trigger_send:
-    send_message()
-    st.session_state.trigger_send = False
+         if st.button("➤", use_container_width=True):
+            send_message()
+
 
 # Chat message container styling
 for msg in st.session_state.messages:
