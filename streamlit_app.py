@@ -227,20 +227,22 @@ for example in examples:
         send_message()
 
 # Input box with on_change trigger
-st._bottom.text_input(
-    "Ask a question about James Cheriyan’s resume:", 
-    key="user_input", 
-    on_change=send_message,
-    placeholder="Type your question and press Enter...",
-    label_visibility="collapsed")
-
-if st.button("Send"):
-    st.session_state.trigger_send = True
-    
-if st.session_state.get("trigger_send"):
+with st._bottom:
+    col1, col2 = st.columns([9, 1])
+    with col1:
+        st.text_input(
+            "Ask a question about James Cheriyan’s resume:", 
+            key="user_input", 
+            placeholder="Type your question and press Enter...",
+            label_visibility="collapsed"
+        )
+    with col2:
+        if st.button("Send", key="send_btn"):
+            st.session_state.trigger_send = True
+if st.session_state.trigger_send:
     send_message()
-    st.session_state.trigger_send = False  # reset
-    
+    st.session_state.trigger_send = False
+
 # Chat message container styling
 for msg in st.session_state.messages:
     if msg["role"] == "user":
