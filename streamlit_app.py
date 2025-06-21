@@ -6,6 +6,24 @@ import streamlit.components.v1 as components
 from PIL import Image
 import threading
 
+st.markdown("""
+    <style>
+    .fixed-bottom {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        padding: 10px 20px;
+        box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        z-index: 9999;
+    }
+    .content-padding {
+        padding-bottom: 80px; /* Height of fixed bottom + margin */
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 API_KEY = os.getenv("OPENROUTER_API_KEY")
 MODEL = "deepseek/deepseek-r1:free"
 
@@ -213,10 +231,26 @@ examples = [
     "What experience do you have in telecom or VoIP?",
 ]
 
+st.markdown('<div class="content-padding">', unsafe_allow_html=True)
+
+st.header("Example questions")
+examples = [
+    "What are your technical skills?",
+    "Describe your experience at Natterbox.",
+    "What is your educational background?",
+    "Summarize your work history.",
+    "What experience do you have in telecom or VoIP?",
+]
+
+
+
 for example in examples:
     if st.sidebar.button(example):
         st.session_state.user_input = example
         send_message()
+
+
+st.markdown('<div class="fixed-bottom">', unsafe_allow_html=True)
 
 # Input box + Send button side by side with loading state
 col1, col2 = st.columns([8,1])
