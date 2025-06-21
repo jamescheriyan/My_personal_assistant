@@ -15,7 +15,7 @@ st.set_page_config(
     layout="centered"
 )
 st.markdown("""
-<h3><span style="font-size: 5.5rem;">🤖</span> Hello! I’m <b>JAi</b>, your AI Assistant.</h3>
+<h3><img src="https://em-content.zobj.net/thumbs/240/apple/354/robot_1f916.png" width="40" style="vertical-align:middle;"> Hello! I’m <b>JAi</b>, your AI Assistant.</h3>
 <h5><i>James’s Mind • AI’s Precision</i></h5>
 """, unsafe_allow_html=True)
 
