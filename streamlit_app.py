@@ -14,14 +14,7 @@ st.set_page_config(
     page_icon="favicon.png",  # Sets favicon in browser tab
     layout="centered"
 )
-image = Image.open("agi.png")
-
-# Layout with image before title
-col1, col2 = st.columns([1, 6])  # Adjust ratio as needed
-with col1:
-    st.image(image, width=100)  # Small avatar
-with col2:
-    st.title("Know James. Ask JAi.")
+st.title("🤖 Know James. Ask JAi.")
 
 if API_KEY is None:
     st.error("Please set the OPENROUTER_API_KEY environment variable.")
