@@ -254,7 +254,7 @@ for msg in st.session_state.messages:
                 align-items: flex-start;
                 margin-bottom: 10px;
             ">
-                <img src="agi.png" alt="AI Avatar" style="
+                <img src="https://cdn-icons-png.flaticon.com/512/7658/7658255.png" alt="AI Avatar" style="
                     width: 36px;
                     height: 36px;
                     border-radius: 50%;
