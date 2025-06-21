@@ -14,7 +14,7 @@ st.set_page_config(
     page_icon="favicon.png",  # Sets favicon in browser tab
     layout="centered"
 )
-st.title(" [ JAi ] 🤖 Artificial Personal Assistant AI Resume Assistant")
+st.title("(＾◡＾)っ💡 Ask JAi anything about James!")
 
 if API_KEY is None:
     st.error("Please set the OPENROUTER_API_KEY environment variable.")
