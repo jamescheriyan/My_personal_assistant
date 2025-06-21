@@ -218,7 +218,7 @@ for col, example in zip(cols, examples):
         if st.button(f"💬 {example}", key=f"ex_{example}"):
             st.session_state.user_input = example
             send_message()
-        st.markdown(f"<div style='font-size: 0.75rem; text-align: center;'>{example}</div>", unsafe_allow_html=True)
+        st.markdown(f"<div style='font-size: 0.75rem; text-align: center;'></div>", unsafe_allow_html=True)
 
 for example in examples:
     if st.sidebar.button(example):
