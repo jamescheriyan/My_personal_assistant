@@ -179,7 +179,8 @@ def send_message():
             "content": user_question,
             "time": format_timestamp()
         })
-        st.session_state.user_input = ""  # Clear input box
+        if "user_input" in st.session_state:
+            st.session_state.user_input = ""  # Clear input box
 
         with st.spinner("🤖 Thinking..."):
             answer = ask_openrouter(user_question)
