@@ -202,11 +202,9 @@ examples = [
 st.markdown("<br><br><br>", unsafe_allow_html=True)
 
 examples = [
-    "What are your technical skills?",
     "Describe your experience at Natterbox.",
     "What is your educational background?",
-    "Summarize your work history.",
-    "What experience do you have in telecom or VoIP?",
+    "Summarize your work history."
 ]
 
 # Create a column for each question
@@ -231,6 +229,7 @@ st._bottom.text_input(
     key="user_input", 
     on_change=send_message,
     placeholder="Type your question and press Enter..."
+    st.markdown(f"<div style='font-size: 0.75rem; text-align: center;'></div>", unsafe_allow_html=True)
 )
             
 
