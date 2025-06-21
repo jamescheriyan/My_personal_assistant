@@ -181,7 +181,7 @@ def send_message():
         })
         st.session_state.user_input = ""  # Clear input box
 
-        with st.bottom.spinner("🤖 Thinking..."):
+        with st.spinner("🤖 Thinking..."):
             answer = ask_openrouter(user_question)
         st.session_state.messages.append({
             "role": "assistant",
