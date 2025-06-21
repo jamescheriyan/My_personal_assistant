@@ -3,13 +3,25 @@ import requests
 import os
 from datetime import datetime
 import streamlit.components.v1 as components
+from PIL import Image
 
 
 API_KEY = os.getenv("OPENROUTER_API_KEY")
 MODEL = "deepseek/deepseek-r1:free"
 
-st.set_page_config(page_title="AI Resume Assistant", page_icon="🤖", layout="centered")
-st.title("🤖 AI Resume Assistant")
+st.set_page_config(
+    page_title="JAI Resume Assistant",
+    page_icon="favicon.png",  # Sets favicon in browser tab
+    layout="centered"
+)
+image = Image.open("agi.png")
+
+# Layout with image before title
+col1, col2 = st.columns([1, 6])  # Adjust ratio as needed
+with col1:
+    st.image(image, width=40)  # Small avatar
+with col2:
+    st.title("Know James. Ask JAi.")
 
 if API_KEY is None:
     st.error("Please set the OPENROUTER_API_KEY environment variable.")
