@@ -185,6 +185,7 @@ def send_message():
         with st._bottom:
             st.spinner("🤖 Thinking..."):
                 answer = ask_openrouter(user_question)
+            st.session_state.loading = False
             st.session_state.messages.append({
                 "role": "assistant",
                 "content": answer,
@@ -233,6 +234,8 @@ st._bottom.text_input(
     on_change=send_message,
     placeholder="Type your question and press Enter...                                                              ➤")
 
+if st.session_state.loading:
+    st.spinner("🤖 Thinking...") 
 
 
 # Chat message container styling
