@@ -15,7 +15,7 @@ st.set_page_config(
     layout="centered"
 )
 
-image = Image.open("logo.gif")
+image = Image.open("AGI.jpg")
 
 # Layout with image before title
 col1, col2 = st.columns([1, 6])  # Adjust ratio as needed
