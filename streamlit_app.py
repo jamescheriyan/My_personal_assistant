@@ -226,12 +226,11 @@ for example in examples:
 
 # Input box with on_change trigger
 
-st.bottom.text_input(
-        "Ask a question about James Cheriyan’s resume:", 
-        key="user_input", 
-        on_change=send_message,
-        placeholder="Type your question and press Enter...                       ➤"
-    )
+st._bottom.text_input(
+    "Ask a question about James Cheriyan’s resume:", 
+    key="user_input", 
+    on_change=send_message,
+    placeholder="Type your question and press Enter...                              ➤")
 
 
 
