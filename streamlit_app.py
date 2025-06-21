@@ -19,7 +19,7 @@ image = Image.open("agi.png")
 # Layout with image before title
 col1, col2 = st.columns([1, 6])  # Adjust ratio as needed
 with col1:
-    st.image(image, width=100, height = 100)  # Small avatar
+    st.image(image, width=100)  # Small avatar
 with col2:
     st.title("Know James. Ask JAi.")
 
