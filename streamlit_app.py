@@ -79,7 +79,7 @@ def send_message(spinner_container):
             spinner_url = "https://cdn-icons-gif.flaticon.com/15577/15577884.gif"
             st.markdown( """
                          <div style="color:red; font-weight:bold; display: flex; align-items: center;">
-                         🤖 Be patient with me, I am thinking...
+                         <img src="https://cdn-icons-png.flaticon.com/512/7658/7658255.png"/> 🤖 Be patient with me, I am thinking...
                          <img src="{0}" width="30" style="margin-left: 10px;" />
                     </div>
                     """.format(spinner_url),
