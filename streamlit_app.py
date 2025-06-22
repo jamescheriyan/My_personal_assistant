@@ -38,120 +38,120 @@ Resume:
 \"\"\"{resume_text}\"\"\"
 
 resume_text = """
-
-JAMES CHERIYAN  
-Technical Support Specialist | IT Solutions | Customer Experience  
- Mobile/Phone number:  +44 7442585688  
- Email : jamescheriyan47@outlook.com  
- Location:  Belfast, UK  
+JAMES CHERIYAN
+Technical Support Specialist | IT Solutions | Customer Experience
+Mobile/Phone number: +44 7442585688
+Email: jamescheriyan47@outlook.com
+Location: Belfast, UK
 
 ---
 
-PROFESSIONAL SUMMARY  
+PROFESSIONAL SUMMARY
 Dedicated technical support professional with a proven track record in troubleshooting and technical problem resolution across various platforms. Passionate about enhancing customer experience through effective communication and proactive problem-solving. Experienced in 24x7 environments, system monitoring, and cross-team collaboration. Skilled in identifying customer needs and implementing process improvements that build trust and satisfaction.
 
 ---
 
-TECHNICAL SKILLS  
-- Technical Troubleshooting  
-- System Monitoring  
-- Problem Solving  
-- Collaboration  
-- Communication Skills  
-- Attention to Detail  
-- Process Optimization  
-- 24x7 Environment  
-- Adaptability  
-- Telecoms Experience  
-- Quick Learning  
-- Networking Knowledge  
-- Decision Making  
-- Help Desk  
-- Active Listening  
-- User Feedback Analysis  
-- CRM Proficiency  
-- Knowledge Base Development  
-- VoIP  
-- Python  
-- IT Systems Proficiency  
-- SQL  
+TECHNICAL SKILLS
+- Technical Troubleshooting
+- System Monitoring
+- Problem Solving
+- Collaboration
+- Communication Skills
+- Attention to Detail
+- Process Optimization
+- 24x7 Environment
+- Adaptability
+- Telecoms Experience
+- Quick Learning
+- Networking Knowledge
+- Decision Making
+- Help Desk
+- Active Listening
+- User Feedback Analysis
+- CRM Proficiency
+- Knowledge Base Development
+- VoIP
+- Python
+- IT Systems Proficiency
+- SQL
 
 ---
 
-STRENGTHS  
-- Excels in software support via multiple channels  
-- Strong cross-functional collaboration  
-- Customer-focused problem solver  
-- Effective communicator  
-- Analytical thinker with a customer-centric mindset  
+STRENGTHS
+- Excels in software support via multiple channels
+- Strong cross-functional collaboration
+- Customer-focused problem solver
+- Effective communicator
+- Analytical thinker with a customer-centric mindset
 
 ---
 
- WORK EXPERIENCE  
+WORK EXPERIENCE
 
-**Technical Support Engineer**  
-*Natterbox* — Belfast, UK  
- Jan 2025 – Present  
+Technical Support Engineer
+Natterbox – Belfast, UK
+Jan 2025 – Present
 
-**Customer Contact & Experience Specialist**  
-*NatWest Group via FirstSource* — Belfast, UK  
- Mar 2022 – Present  
-- First point of contact for online banking issues via call and email  
-- Documented frequent issues and solutions  
-- Collaborated with IT to resolve tech issues  
-- Assisted with digital banking service adoption  
-- Monitored systems to ensure seamless operations  
-- Suggested recurring problem process improvements  
-- Maintained detailed logs for analysis  
+Customer Contact & Experience Specialist
+NatWest Group via FirstSource – Belfast, UK
+Mar 2022 – Present
+- First point of contact for online banking issues via call and email
+- Documented frequent issues and solutions
+- Collaborated with IT to resolve tech issues
+- Assisted with digital banking service adoption
+- Monitored systems to ensure seamless operations
+- Suggested recurring problem process improvements
+- Maintained detailed logs for analysis
 
-**Customer Contact Associate - Technical Support**  
-*Comcast Corp Xfinity via Nuance Communications* — Bangalore  
- Jul 2019 – Sep 2021  
-- Provided tech support via chat, email, CRM  
-- Diagnosed system failures in time-sensitive settings  
-- Monitored networks and resolved bottlenecks  
-- Supported digital services (internet, TV, VoIP)  
-- Implemented process improvements  
-- Maintained CRM records  
-- Acted as liaison between tech teams and users  
+Customer Contact Associate - Technical Support
+Comcast Corp Xfinity via Nuance Communications – Bangalore
+Jul 2019 – Sep 2021
+- Provided tech support via chat, email, CRM
+- Diagnosed system failures in time-sensitive settings
+- Monitored networks and resolved bottlenecks
+- Supported digital services (internet, TV, VoIP)
+- Implemented process improvements
+- Maintained CRM records
+- Acted as liaison between tech teams and users
 
-**Customer Service Advisor - Technical Support**  
-*AT&T U-verse via [24]7.ai* — Bangalore  
- Nov 2017 – Dec 2018  
-- Managed live chat/email/CRM in 24x7 environment  
-- Resolved issues for AT&T U-verse services  
-- Ensured quality compliance and procedure adherence  
-- Delivered tech support training to teams  
-- Maintained accurate CRM records  
-- Assisted customers with setups and upgrades  
+Customer Service Advisor - Technical Support
+AT&T U-verse via [24]7.ai – Bangalore
+Nov 2017 – Dec 2018
+- Managed live chat/email/CRM in 24x7 environment
+- Resolved issues for AT&T U-verse services
+- Ensured quality compliance and procedure adherence
+- Delivered tech support training to teams
+- Maintained accurate CRM records
+- Assisted customers with setups and upgrades
 
-**IT Technical Support Specialist and Trainer**  
-*Little Flower Convent School*  
- Jun 2014 – Jan 2017  
-- Trained staff on TechNext systems  
-- Supported school software and improved usability  
-- Helped over 300 students improve computer skills, increasing pass rates by 95%  
-
----
-
- EDUCATION  
-
-**MSc Computer Science**  
-Ulster University — Belfast, UK  
- Feb 2022 – Sep 2023  
-
-**BCA – Bachelor’s in Computer Application**  
-Kannur University — Kannur, India  
- Jun 2011 – Jun 2014  
+IT Technical Support Specialist and Trainer
+Little Flower Convent School
+Jun 2014 – Jan 2017
+- Trained staff on TechNext systems
+- Supported school software and improved usability
+- Helped over 300 students improve computer skills, increasing pass rates by 95%
 
 ---
 
- HOBBIES  
-- Football  
-- Badminton  
-- Cycling  
-- Traveling & Hiking  
+EDUCATION
+
+MSc Computer Science
+Ulster University – Belfast, UK
+Feb 2022 – Sep 2023
+
+BCA – Bachelor’s in Computer Application
+Kannur University – Kannur, India
+Jun 2011 – Jun 2014
+
+---
+
+HOBBIES
+- Football
+- Badminton
+- Cycling
+- Traveling & Hiking
 """
+
 
 Question: {question}
 """
