@@ -113,6 +113,7 @@ examples = [
 ]
 
 bottom_spinner = st.empty()
+
 if "show_examples" not in st.session_state:
     st.session_state.show_examples = True
     
@@ -126,7 +127,7 @@ for col, example in zip(cols, examples):
         if st.button(f"💬 {example}", key=f"ex_{example}"):
             st.session_state.user_input = example
             st.session_state.show_examples = False
-            send_message(bottom_spinner=True)
+            send_message(bottom_spinner)
         st.markdown(f"<div style='font-size: 0.75rem; text-align: center;'></div>", unsafe_allow_html=True)
 
 for example in examples:
