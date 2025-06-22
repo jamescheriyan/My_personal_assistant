@@ -64,7 +64,7 @@ Question: {question}
 def format_timestamp():
     return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-def send_message():
+def send_message(spinner_container):
     user_question = st.session_state.user_input.strip()
     if user_question:
         st.session_state.messages.append({
@@ -75,7 +75,7 @@ def send_message():
         if "user_input" in st.session_state:
             st.session_state.user_input = ""  # Clear input box
 
-        with st.spinner("🤖 Thinking..."):
+        with spinner_container.spinner("🤖 Thinking..."):
             answer = ask_openrouter(user_question)
         st.session_state.messages.append({
             "role": "assistant",
@@ -116,13 +116,15 @@ for example in examples:
     if st.sidebar.button(example):
         st.session_state.user_input = example
         send_message()
+        
+bottom_spinner = st.empty()
 
 # Input box with on_change trigger
 
 st._bottom.text_input(
     "Ask a question about James Cheriyan’s resume:", 
     key="user_input", 
-    on_change=send_message,
+    on_change=lambda: send_message(bottom_spinner),
     placeholder="Type your question and press Enter...                                                                                                          ➤")
  
 
