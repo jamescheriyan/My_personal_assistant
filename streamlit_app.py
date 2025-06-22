@@ -41,9 +41,9 @@ resume_text = """
 
 JAMES CHERIYAN  
 Technical Support Specialist | IT Solutions | Customer Experience  
- 📞 +44 7442585688  
- 📧 jamescheriyan47@outlook.com  
- 📍 Belfast, UK  
+ Mobile/Phone number:  +44 7442585688  
+ Email : jamescheriyan47@outlook.com  
+ Location:  Belfast, UK  
 
 ---
 
