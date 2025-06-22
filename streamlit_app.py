@@ -75,7 +75,10 @@ def send_message(spinner_container):
         if "user_input" in st.session_state:
             st.session_state.user_input = ""  # Clear input box
 
-        with spinner_container.spinner("🤖 Thinking..."):
+        with bottom_spinner:
+            st.markdown('<div style="color: red;">🤖 Be patient with me, I am thinking...</div>', unsafe_allow_html=True)
+
+        with st.spinner("🤖 Thinking..."):
             answer = ask_openrouter(user_question)
         st.session_state.messages.append({
             "role": "assistant",
@@ -124,7 +127,8 @@ bottom_spinner = st.empty()
 st._bottom.text_input(
     "Ask a question about James Cheriyan’s resume:", 
     key="user_input", 
-    on_change=lambda: send_message(bottom_spinner),
+    on_change= send_message(),
+    args=(bottom_spinner,),
     placeholder="Type your question and press Enter...                                                                                                          ➤")
  
 
