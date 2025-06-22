@@ -64,7 +64,7 @@ Question: {question}
 def format_timestamp():
     return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-def send_message(bottom_spinner):
+def send_message(spinner_container):
     user_question = st.session_state.user_input.strip()
     if user_question:
         st.session_state.messages.append({
@@ -111,6 +111,24 @@ examples = [
     "What is your educational background?",
     "Summarize your work history."
 ]
+
+middle_spinner = st.empty()
+
+# Create a column for each question
+cols = st.columns(len(examples))
+
+for col, example in zip(cols, examples):
+    with col:
+        # HTML to make text small
+        if st.button(f"💬 {example}", key=f"ex_{example}"):
+            st.session_state.user_input = example
+            send_message(middle_spinner)
+        st.markdown(f"<div style='font-size: 0.75rem; text-align: center;'></div>", unsafe_allow_html=True)
+
+for example in examples:
+    if st.sidebar.button(example):
+        st.session_state.user_input = example
+        send_message(middle_spinner)
         
 # Chat message container styling
 for msg in st.session_state.messages:
@@ -175,22 +193,6 @@ for msg in st.session_state.messages:
             unsafe_allow_html=True,
         )
 bottom_spinner = st.empty()
-
-# Create a column for each question
-cols = st.columns(len(examples))
-
-for col, example in zip(cols, examples):
-    with col:
-        # HTML to make text small
-        if st.button(f"💬 {example}", key=f"ex_{example}"):
-            st.session_state.user_input = example
-            send_message(bottom_spinner)
-        st.markdown(f"<div style='font-size: 0.75rem; text-align: center;'></div>", unsafe_allow_html=True)
-
-for example in examples:
-    if st.sidebar.button(example):
-        st.session_state.user_input = example
-        send_message(bottom_spinner)
         
 # Input box with on_change trigger
 st._bottom.text_input(
