@@ -47,12 +47,12 @@ Technical Support Specialist | IT Solutions | Customer Experience
 
 ---
 
-🧾 PROFESSIONAL SUMMARY  
+PROFESSIONAL SUMMARY  
 Dedicated technical support professional with a proven track record in troubleshooting and technical problem resolution across various platforms. Passionate about enhancing customer experience through effective communication and proactive problem-solving. Experienced in 24x7 environments, system monitoring, and cross-team collaboration. Skilled in identifying customer needs and implementing process improvements that build trust and satisfaction.
 
 ---
 
-🛠️ TECHNICAL SKILLS  
+TECHNICAL SKILLS  
 - Technical Troubleshooting  
 - System Monitoring  
 - Problem Solving  
@@ -78,7 +78,7 @@ Dedicated technical support professional with a proven track record in troublesh
 
 ---
 
-🏆 STRENGTHS  
+STRENGTHS  
 - Excels in software support via multiple channels  
 - Strong cross-functional collaboration  
 - Customer-focused problem solver  
@@ -87,15 +87,15 @@ Dedicated technical support professional with a proven track record in troublesh
 
 ---
 
-💼 WORK EXPERIENCE  
+ WORK EXPERIENCE  
 
 **Technical Support Engineer**  
 *Natterbox* — Belfast, UK  
-📅 Jan 2025 – Present  
+ Jan 2025 – Present  
 
 **Customer Contact & Experience Specialist**  
 *NatWest Group via FirstSource* — Belfast, UK  
-📅 Mar 2022 – Present  
+ Mar 2022 – Present  
 - First point of contact for online banking issues via call and email  
 - Documented frequent issues and solutions  
 - Collaborated with IT to resolve tech issues  
@@ -106,7 +106,7 @@ Dedicated technical support professional with a proven track record in troublesh
 
 **Customer Contact Associate - Technical Support**  
 *Comcast Corp Xfinity via Nuance Communications* — Bangalore  
-📅 Jul 2019 – Sep 2021  
+ Jul 2019 – Sep 2021  
 - Provided tech support via chat, email, CRM  
 - Diagnosed system failures in time-sensitive settings  
 - Monitored networks and resolved bottlenecks  
@@ -117,7 +117,7 @@ Dedicated technical support professional with a proven track record in troublesh
 
 **Customer Service Advisor - Technical Support**  
 *AT&T U-verse via [24]7.ai* — Bangalore  
-📅 Nov 2017 – Dec 2018  
+ Nov 2017 – Dec 2018  
 - Managed live chat/email/CRM in 24x7 environment  
 - Resolved issues for AT&T U-verse services  
 - Ensured quality compliance and procedure adherence  
@@ -127,26 +127,26 @@ Dedicated technical support professional with a proven track record in troublesh
 
 **IT Technical Support Specialist and Trainer**  
 *Little Flower Convent School*  
-📅 Jun 2014 – Jan 2017  
+ Jun 2014 – Jan 2017  
 - Trained staff on TechNext systems  
 - Supported school software and improved usability  
 - Helped over 300 students improve computer skills, increasing pass rates by 95%  
 
 ---
 
-🎓 EDUCATION  
+ EDUCATION  
 
 **MSc Computer Science**  
 Ulster University — Belfast, UK  
-📅 Feb 2022 – Sep 2023  
+ Feb 2022 – Sep 2023  
 
 **BCA – Bachelor’s in Computer Application**  
 Kannur University — Kannur, India  
-📅 Jun 2011 – Jun 2014  
+ Jun 2011 – Jun 2014  
 
 ---
 
-🎯 HOBBIES  
+ HOBBIES  
 - Football  
 - Badminton  
 - Cycling  
