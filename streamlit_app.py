@@ -131,10 +131,16 @@ if st.session_state.show_examples:
                 send_message(bottom_spinner)
             st.markdown(f"<div style='font-size: 0.75rem; text-align: center;'></div>", unsafe_allow_html=True)
 
-    for example in examples:
-        if st.sidebar.button(example):
-            st.session_state.user_input = example
-            send_message(bottom_spinner)
+exampless = [
+    "Describe your experience at Natterbox.",
+    "What is your educational background?",
+    "Summarize your work history."
+]
+
+for exampl in exampless:
+    if st.sidebar.button(exampl):
+        st.session_state.user_input = exampl
+        send_message(bottom_spinner)
         
 # Chat message container styling
 for msg in st.session_state.messages:
