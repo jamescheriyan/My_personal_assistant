@@ -77,9 +77,15 @@ def send_message(spinner_container):
 
         with bottom_spinner:
             spinner_url = "https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif"
-            st.markdown('<div style="color: red;">🤖 Be patient with me, I am thinking...</div>', unsafe_allow_html=True)
-            st.image(spinner_url, width=30)
-
+            st.markdown( """
+                         <div style="color:red; font-weight:bold; display: flex; align-items: center;">
+                         🤖 Be patient with me, I am thinking...
+                         <img src="{0}" width="30" style="margin-left: 10px;" />
+                    </div>
+                    """.format(spinner_url),
+                    unsafe_allow_html=True
+                    )
+            
         with st.spinner("🤖 Thinking..."):
             answer = ask_openrouter(user_question)
         st.session_state.messages.append({
