@@ -64,7 +64,7 @@ Question: {question}
 def format_timestamp():
     return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-def send_message(spinner_container):
+def send_message():
     user_question = st.session_state.user_input.strip()
     if user_question:
         st.session_state.messages.append({
@@ -120,13 +120,13 @@ for col, example in zip(cols, examples):
         # HTML to make text small
         if st.button(f"💬 {example}", key=f"ex_{example}"):
             st.session_state.user_input = example
-            send_message(bottom_spinner)
+            send_message()
         st.markdown(f"<div style='font-size: 0.75rem; text-align: center;'></div>", unsafe_allow_html=True)
 
 for example in examples:
     if st.sidebar.button(example):
         st.session_state.user_input = example
-        send_message(bottom_spinner)
+        send_message()
         
 # Chat message container styling
 for msg in st.session_state.messages:
