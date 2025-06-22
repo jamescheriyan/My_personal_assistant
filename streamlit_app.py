@@ -4,6 +4,7 @@ import os
 from datetime import datetime
 import streamlit.components.v1 as components
 from PIL import Image
+import json
 
 RESUME_FILE_PATH = "James_Cheriyan.txt"
 try:
@@ -16,6 +17,14 @@ except FileNotFoundError:
 
 API_KEY = os.getenv("OPENROUTER_API_KEY")
 MODEL = "deepseek/deepseek-r1:free"
+
+response = requests.get(
+  url="https://openrouter.ai/api/v1/auth/key",
+  headers={
+    "Authorization": f"Bearer <API_KEY>"
+  }
+)
+print(json.dumps(response.json(), indent=2))
 
 st.set_page_config(
     page_title="JAI Resume Assistant",
