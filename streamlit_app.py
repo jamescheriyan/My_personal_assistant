@@ -127,7 +127,7 @@ bottom_spinner = st.empty()
 st._bottom.text_input(
     "Ask a question about James Cheriyan’s resume:", 
     key="user_input", 
-    on_change= send_message(),
+    on_change= send_message,
     args=(bottom_spinner,),
     placeholder="Type your question and press Enter...                                                                                                          ➤")
  
