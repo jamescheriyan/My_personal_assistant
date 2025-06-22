@@ -120,7 +120,6 @@ for example in examples:
         st.session_state.user_input = example
         send_message()
         
-bottom_spinner = st.empty()
 
 # Input box with on_change trigger
 
@@ -195,7 +194,7 @@ for msg in st.session_state.messages:
             """,
             unsafe_allow_html=True,
         )
-
+bottom_spinner = st.empty()
 st.markdown('<div id="chat-scroll-anchor"></div>', unsafe_allow_html=True)
 
 # Auto-scroll script
