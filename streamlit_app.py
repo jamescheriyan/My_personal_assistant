@@ -113,16 +113,20 @@ examples = [
 ]
 
 bottom_spinner = st.empty()
-
+if "show_examples" not in st.session_state:
+    st.session_state.show_examples = True
+    
 # Create a column for each question
-cols = st.columns(len(examples))
+if st.session_state.show_examples:
+    cols = st.columns(len(examples))
 
 for col, example in zip(cols, examples):
     with col:
         # HTML to make text small
         if st.button(f"💬 {example}", key=f"ex_{example}"):
             st.session_state.user_input = example
-            send_message(bottom_spinner)
+            st.session_state.show_examples = False
+            send_message(bottom_spinner=True)
         st.markdown(f"<div style='font-size: 0.75rem; text-align: center;'></div>", unsafe_allow_html=True)
 
 for example in examples:
