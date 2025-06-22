@@ -38,11 +38,12 @@ Resume:
 \"\"\"{resume_text}\"\"\"
 
 resume_text = """
+
 JAMES CHERIYAN  
 Technical Support Specialist | IT Solutions | Customer Experience  
-📞 +44 7442585688  
-📧 jamescheriyan47@outlook.com  
-📍 Belfast, UK  
+ 📞 +44 7442585688  
+ 📧 jamescheriyan47@outlook.com  
+ 📍 Belfast, UK  
 
 ---
 
