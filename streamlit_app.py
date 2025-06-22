@@ -120,18 +120,6 @@ for example in examples:
         st.session_state.user_input = example
         send_message()
         
-
-# Input box with on_change trigger
-
-st._bottom.text_input(
-    "Ask a question about James Cheriyan’s resume:", 
-    key="user_input", 
-    on_change= send_message,
-    args=(bottom_spinner,),
-    placeholder="Type your question and press Enter...                                                                                                          ➤")
- 
-
-
 # Chat message container styling
 for msg in st.session_state.messages:
     if msg["role"] == "user":
@@ -195,6 +183,18 @@ for msg in st.session_state.messages:
             unsafe_allow_html=True,
         )
 bottom_spinner = st.empty()
+# Input box with on_change trigger
+
+st._bottom.text_input(
+    "Ask a question about James Cheriyan’s resume:", 
+    key="user_input", 
+    on_change= send_message,
+    args=(bottom_spinner,),
+    placeholder="Type your question and press Enter...                                                                                                          ➤")
+ 
+
+
+
 st.markdown('<div id="chat-scroll-anchor"></div>', unsafe_allow_html=True)
 
 # Auto-scroll script
