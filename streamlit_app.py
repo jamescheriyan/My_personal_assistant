@@ -76,7 +76,9 @@ def send_message(spinner_container):
             st.session_state.user_input = ""  # Clear input box
 
         with bottom_spinner:
+            spinner_url = "https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif"
             st.markdown('<div style="color: red;">🤖 Be patient with me, I am thinking...</div>', unsafe_allow_html=True)
+            st.image(spinner_url, width=30)
 
         with st.spinner("🤖 Thinking..."):
             answer = ask_openrouter(user_question)
