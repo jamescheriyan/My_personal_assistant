@@ -76,7 +76,7 @@ def send_message(spinner_container):
             st.session_state.user_input = ""  # Clear input box
 
         with bottom_spinner:
-            spinner_url = "https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif"
+            spinner_url = "https://cdn-icons-gif.flaticon.com/15577/15577884.gif"
             st.markdown( """
                          <div style="color:red; font-weight:bold; display: flex; align-items: center;">
                          🤖 Be patient with me, I am thinking...
