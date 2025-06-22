@@ -7,6 +7,7 @@ from PIL import Image
 import pdfplumber
 
 
+uploaded_file = st.file_uploader("Upload your resume (PDF)", type="pdf")
 
 API_KEY = os.getenv("OPENROUTER_API_KEY")
 MODEL = "deepseek/deepseek-r1:free"
