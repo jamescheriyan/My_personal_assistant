@@ -7,7 +7,8 @@ from PIL import Image
 import pdfplumber
 
 
-uploaded_file = st.file_uploader("Upload ", type="pdf")
+uploaded_file = "James Cheriyan.pdf"
+
 
 API_KEY = os.getenv("OPENROUTER_API_KEY")
 MODEL = "deepseek/deepseek-r1:free"
