@@ -88,6 +88,7 @@ def send_message(spinner_container):
             
         with st.spinner("🤖 Thinking..."):
             answer = ask_openrouter(user_question)
+            time.sleep(2)
         st.session_state.messages.append({
             "role": "assistant",
             "content": answer,
