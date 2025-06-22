@@ -93,6 +93,7 @@ def send_message(spinner_container):
             "content": answer,
             "time": format_timestamp()
         })
+        spinner_container.empty()
     
 # Sidebar example questions
 st.sidebar.header("Example questions")
